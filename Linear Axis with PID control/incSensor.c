@@ -83,7 +83,7 @@ signed int angleRealCompute(unsigned int *arrayX, unsigned int *arrayY){
 signed int angleAvgCompute(unsigned int *arrayX, unsigned int *arrayY){
 
     volatile signed int xAvg;
-	volatile signed int yAvg;
+    volatile signed int yAvg;
     volatile signed int averageAngle;
 
     // windowAvg(array1, array2)
