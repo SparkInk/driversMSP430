@@ -43,7 +43,7 @@ signed int windowAvg(unsigned int *array){
     return average;
 }
 /***********************************************************************
- * Name: angleAvgCompute
+ * Name: angleRealCompute
  * 
  * Description: 
  * 
