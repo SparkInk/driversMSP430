@@ -24,9 +24,8 @@ ENC_STATE encState = {0, 0};
 
 volatile unsigned int countDiff;
 
-int main(void)
-{
-	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+int main(void) {
+    WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
 
     volatile char fwVelocityStr[15] = "FW Velocity: \n";
     volatile char rpmStr[6] = " rpm\n";
@@ -79,9 +78,9 @@ int main(void)
 }
 
 /********************************************
- *		 		TimerA0 ISR          		*
- * 											*
- * Updates the speed at 60 Hz	 			*
+ *		TimerA0 ISR          	    *
+ * 					    *
+ * Updates the speed at 60 Hz	 	    *
  *******************************************/
 
 #pragma vector = TIMER1_A0_VECTOR
@@ -94,10 +93,10 @@ __interrupt void timerA0ISR(void) {
     TA1CTL &= ~TAIFG;
 }
 /************************************************
- *		 		TimerA1 ISR          			*
- * 												*
+ *	TimerA1 ISR          			*
+ * 						*
  * Used to compute the speed of the flywheel    *
- * with the capture mode						*
+ * with the capture mode			*
  ***********************************************/
 
 #pragma vector = TIMER0_A1_VECTOR
